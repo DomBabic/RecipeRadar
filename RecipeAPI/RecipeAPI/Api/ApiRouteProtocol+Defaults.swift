@@ -9,35 +9,19 @@ import Foundation
 
 extension ApiRouteProtocol {
     
-    private var bundle: Bundle? {
-        Bundle(identifier: "DomBabic.RecipeAPI")
-    }
-
-    /// Bundle property list.
-    private var info: [String: Any]? {
-        return bundle?.infoDictionary
-    }
-    
     /// Base API URL.
     var baseURL: URL? {
-        guard let baseString = info?["ApiBaseURL"] as? String,
-              let url = URL(string: baseString) else {
-            return nil
-        }
-        
-        return url
+        URL(string: ApiConstants.Api.baseUrl)
     }
     
     /// Default query parameters used in every network request.
     var defaultQueryParameters: QueryParameters {
-        guard let appId = info?["AppId"] as? String,
-              let appKey = info?["AppKey"] as? String else {
-            return [:]
-        }
+        let query = ApiConstants.Query.self
+        let api = ApiConstants.Api.self
         
         let params: QueryParameters = [
-            ApiConstants.Query.appId: appId,
-            ApiConstants.Query.appKey: appKey
+            query.appId: api.appId,
+            query.appKey: api.appKey
         ]
         
         return params

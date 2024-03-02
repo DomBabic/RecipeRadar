@@ -22,4 +22,13 @@ public struct ApiConstants {
         /// Represents a query key.
         public static let query = "q"
     }
+    
+    public struct Api {
+        
+        public static let appId = "4dbab113"
+        
+        public static let appKey = "287d24a63cd5d2f89801a7506ba5b62b"
+        
+        public static let baseUrl = "https://api.edamam.com"
+    }
 }

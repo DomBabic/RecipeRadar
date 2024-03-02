@@ -23,8 +23,6 @@
 		B4E6950E2B92345600704020 /* RecipeRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E6950D2B92345600704020 /* RecipeRoute.swift */; };
 		B4E695112B923AE300704020 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695102B923AE300704020 /* NetworkService.swift */; };
 		B4E6951E2B930B4C00704020 /* RecipeRouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E6951D2B930B4C00704020 /* RecipeRouteTests.swift */; };
-		B4E695212B9311E200704020 /* APIConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B4E694F02B92232800704020 /* APIConfig.xcconfig */; };
-		B4E695222B9311E200704020 /* APIConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B4E694F02B92232800704020 /* APIConfig.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +40,6 @@
 		B4E694D02B9218CE00704020 /* RecipeAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecipeAPI.h; sourceTree = "<group>"; };
 		B4E694D12B9218CE00704020 /* RecipeAPI.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = RecipeAPI.docc; sourceTree = "<group>"; };
 		B4E694D72B9218CE00704020 /* RecipeAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4E694F02B92232800704020 /* APIConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = APIConfig.xcconfig; sourceTree = "<group>"; };
 		B4E694F52B9226A400704020 /* ApiRouteProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRouteProtocol.swift; sourceTree = "<group>"; };
 		B4E694F82B92272000704020 /* MimeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MimeType.swift; sourceTree = "<group>"; };
 		B4E694FB2B9227AD00704020 /* HttpHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpHeader.swift; sourceTree = "<group>"; };
@@ -103,7 +100,6 @@
 				B4E694F72B92270B00704020 /* Mime */,
 				B4E695012B92280F00704020 /* Query */,
 				B4E6950F2B923AD200704020 /* Services */,
-				B4E694E82B921A5600704020 /* Support */,
 				B4E694D02B9218CE00704020 /* RecipeAPI.h */,
 				B4E694D12B9218CE00704020 /* RecipeAPI.docc */,
 			);
@@ -116,14 +112,6 @@
 				B4E6951B2B930B3000704020 /* Api */,
 			);
 			path = RecipeAPITests;
-			sourceTree = "<group>";
-		};
-		B4E694E82B921A5600704020 /* Support */ = {
-			isa = PBXGroup;
-			children = (
-				B4E694F02B92232800704020 /* APIConfig.xcconfig */,
-			);
-			path = Support;
 			sourceTree = "<group>";
 		};
 		B4E694F42B92268C00704020 /* Api */ = {
@@ -290,7 +278,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4E695212B9311E200704020 /* APIConfig.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +285,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4E695222B9311E200704020 /* APIConfig.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,7 +332,6 @@
 /* Begin XCBuildConfiguration section */
 		B4E694DF2B9218CE00704020 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4E694F02B92232800704020 /* APIConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -398,7 +383,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = RecipeAPI/Support/Info.plist;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -414,7 +398,6 @@
 		};
 		B4E694E02B9218CE00704020 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4E694F02B92232800704020 /* APIConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -460,7 +443,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = RecipeAPI/Support/Info.plist;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -474,7 +456,6 @@
 		};
 		B4E694E22B9218CE00704020 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4E694F02B92232800704020 /* APIConfig.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -485,7 +466,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
@@ -514,7 +494,6 @@
 		};
 		B4E694E32B9218CE00704020 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4E694F02B92232800704020 /* APIConfig.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -525,7 +504,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
@@ -554,7 +532,6 @@
 		};
 		B4E694E52B9218CE00704020 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4E694F02B92232800704020 /* APIConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -579,7 +556,6 @@
 		};
 		B4E694E62B9218CE00704020 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4E694F02B92232800704020 /* APIConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
