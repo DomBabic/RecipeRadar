@@ -57,4 +57,25 @@ final class RecipeRouteTests: XCTestCase {
     func testBody() {
         XCTAssertNil(route.body)
     }
+    
+    func testFormattedUrlString() throws {
+        let formatted = try route.formattedUrlString()
+        
+        let exp = "https://api.edamam.com/search"
+        let act = String(formatted.prefix(exp.count))
+        
+        XCTAssertEqual(act, exp)
+        
+        XCTAssertTrue(formatted.contains("q=chicken"))
+        XCTAssertTrue(formatted.contains("\(ApiConstants.Query.appKey)=\(ApiConstants.Api.appKey)"))
+        XCTAssertTrue(formatted.contains("\(ApiConstants.Query.appId)=\(ApiConstants.Api.appId)"))
+        XCTAssertTrue(formatted.contains("\(ApiConstants.Query.from)=0"))
+        XCTAssertTrue(formatted.contains("\(ApiConstants.Query.to)=1"))
+    }
+    
+    func testApiURL() throws {
+        let url = try route.apiURL()
+        
+        XCTAssertNotNil(url.query())
+    }
 }
