@@ -55,7 +55,6 @@
 		B4E6950A2B92321600704020 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		B4E6950D2B92345600704020 /* RecipeRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRoute.swift; sourceTree = "<group>"; };
 		B4E695102B923AE300704020 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		B4E6951A2B930A7E00704020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4E6951D2B930B4C00704020 /* RecipeRouteTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeRouteTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				B4E694F02B92232800704020 /* APIConfig.xcconfig */,
-				B4E6951A2B930A7E00704020 /* Info.plist */,
 			);
 			path = Support;
 			sourceTree = "<group>";
