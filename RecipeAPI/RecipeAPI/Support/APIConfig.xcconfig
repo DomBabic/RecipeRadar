@@ -10,4 +10,4 @@
 
 APP_ID = 4dbab113
 APP_KEY = 287d24a63cd5d2f89801a7506ba5b62b
-API_BASE_URL = https://api.edamam.com
+API_BASE_URL = https:/$()/api.edamam.com

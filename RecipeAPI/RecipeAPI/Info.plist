@@ -4,9 +4,9 @@
 <dict>
 	<key>ApiBaseUrl</key>
 	<string>$(API_BASE_URL)</string>
-	<key>AppKey</key>
-	<string>$(APP_KEY)</string>
 	<key>AppId</key>
 	<string>$(APP_ID)</string>
+	<key>AppKey</key>
+	<string>$(APP_KEY)</string>
 </dict>
 </plist>
