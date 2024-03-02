@@ -23,6 +23,8 @@
 		B4E6950E2B92345600704020 /* RecipeRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E6950D2B92345600704020 /* RecipeRoute.swift */; };
 		B4E695112B923AE300704020 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695102B923AE300704020 /* NetworkService.swift */; };
 		B4E6951E2B930B4C00704020 /* RecipeRouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E6951D2B930B4C00704020 /* RecipeRouteTests.swift */; };
+		B4E6954D2B9343E400704020 /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E6954C2B9343E400704020 /* URLProtocolMock.swift */; };
+		B4E695502B93451A00704020 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E6954F2B93451A00704020 /* NetworkServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		B4E6950D2B92345600704020 /* RecipeRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRoute.swift; sourceTree = "<group>"; };
 		B4E695102B923AE300704020 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		B4E6951D2B930B4C00704020 /* RecipeRouteTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeRouteTests.swift; sourceTree = "<group>"; };
+		B4E6954C2B9343E400704020 /* URLProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolMock.swift; sourceTree = "<group>"; };
+		B4E6954F2B93451A00704020 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 		B4E694DB2B9218CE00704020 /* RecipeAPITests */ = {
 			isa = PBXGroup;
 			children = (
+				B4E6954B2B9343D900704020 /* Mocks */,
 				B4E6951B2B930B3000704020 /* Api */,
 			);
 			path = RecipeAPITests;
@@ -173,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				B4E6951C2B930B3800704020 /* Routes */,
+				B4E6954E2B9344C300704020 /* Services */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -183,6 +189,22 @@
 				B4E6951D2B930B4C00704020 /* RecipeRouteTests.swift */,
 			);
 			path = Routes;
+			sourceTree = "<group>";
+		};
+		B4E6954B2B9343D900704020 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				B4E6954C2B9343E400704020 /* URLProtocolMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		B4E6954E2B9344C300704020 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B4E6954F2B93451A00704020 /* NetworkServiceTests.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +338,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4E6951E2B930B4C00704020 /* RecipeRouteTests.swift in Sources */,
+				B4E695502B93451A00704020 /* NetworkServiceTests.swift in Sources */,
+				B4E6954D2B9343E400704020 /* URLProtocolMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
