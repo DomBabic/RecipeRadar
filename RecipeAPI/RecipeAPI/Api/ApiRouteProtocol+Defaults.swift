@@ -8,10 +8,14 @@
 import Foundation
 
 extension ApiRouteProtocol {
+    
+    private var bundle: Bundle? {
+        Bundle(identifier: "DomBabic.RecipeAPI")
+    }
 
     /// Bundle property list.
     private var info: [String: Any]? {
-        return Bundle.main.infoDictionary
+        return bundle?.infoDictionary
     }
     
     /// Base API URL.

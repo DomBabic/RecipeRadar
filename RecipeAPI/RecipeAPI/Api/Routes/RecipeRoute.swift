@@ -33,7 +33,7 @@ public struct RecipeRoute: ApiRouteProtocol {
     }
     
     public var headers: [HttpHeader] {
-        []
+        defaultHeaders
     }
     
     public var body: Data? {
