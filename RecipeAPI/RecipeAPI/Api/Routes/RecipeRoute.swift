@@ -7,18 +7,18 @@
 
 import Foundation
 
+/// Route used with recipe search API.
 public struct RecipeRoute: ApiRouteProtocol {
+    /// User's query for a recipe (e.g. `chicken`).
     let recipe: String
+    /// Start index of results, used for paging data.
     let from: Int
+    /// End index of results, used for paging data.
     let to: Int
     
-    public var method: HttpMethod {
-        .GET
-    }
+    public var method: HttpMethod { .GET }
     
-    public var path: String {
-        "search"
-    }
+    public var path: String { "search" }
     
     public var query: QueryParameters? {
         var defaults = defaultQueryParameters
@@ -32,13 +32,9 @@ public struct RecipeRoute: ApiRouteProtocol {
         return defaults
     }
     
-    public var headers: [HttpHeader] {
-        defaultHeaders
-    }
+    public var headers: [HttpHeader] { defaultHeaders }
     
-    public var body: Data? {
-        nil
-    }
+    public var body: Data? { nil }
 }
 
 //

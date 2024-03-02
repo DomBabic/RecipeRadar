@@ -9,16 +9,40 @@ import Foundation
 
 /// Protocol which defines methods used for performing network requests.
 public protocol NetworkServiceProtocol {
-    func request<T: Codable>(_ urlRequest: URLRequest) async throws -> T
-    func completableRequest(_ urlRequest: URLRequest) async throws
     
+    /// JSONDecoder used in data decoding.
     static var decoder: JSONDecoder { get }
+    
+    /// Method used to perform network requests.
+    ///
+    /// - Parameters:
+    ///     - urlRequest: URLRequest with which data task is performed.
+    ///
+    /// - Throws: An error indicating that something went wrong while performing a request.
+    ///
+    /// - Returns:
+    ///     Decoded object of type conforming to `Codable` protocol.
+    func request<T: Codable>(_ urlRequest: URLRequest) async throws -> T
+    
+    /// Method used to perform network requests without return value.
+    ///
+    /// - Parameters:
+    ///     - urlRequest: URLRequest with which data task is performed.
+    ///
+    /// - Throws: An error indicating that something went wrong while performing a request.
+    func completableRequest(_ urlRequest: URLRequest) async throws
 }
 
+/// Service exposing methods for performing network requests.
 public final class NetworkService: NetworkServiceProtocol {
     
+    /// URLSession used in performing data tasks.
     let session: URLSession
     
+    /// Default initialiser for ``NetworkService`` class.
+    ///
+    /// - Parameters:
+    ///     - session: URLSession used to perform network requests.
     init(session: URLSession = .shared) {
         self.session = session
     }

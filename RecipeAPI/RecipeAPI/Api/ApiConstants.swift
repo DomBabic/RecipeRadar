@@ -24,11 +24,11 @@ public struct ApiConstants {
     }
     
     public struct Api {
-        
+        /// Application ID used in network requests.
         public static let appId = "4dbab113"
-        
+        /// Application key used in network requests.
         public static let appKey = "287d24a63cd5d2f89801a7506ba5b62b"
-        
+        /// Base API url used in network requests.
         public static let baseUrl = "https://api.edamam.com"
     }
 }
