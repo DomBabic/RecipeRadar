@@ -11,7 +11,6 @@
 		B4E694D82B9218CE00704020 /* RecipeAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E694CD2B9218CE00704020 /* RecipeAPI.framework */; };
 		B4E694DD2B9218CE00704020 /* RecipeAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E694DC2B9218CE00704020 /* RecipeAPITests.swift */; };
 		B4E694DE2B9218CE00704020 /* RecipeAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = B4E694D02B9218CE00704020 /* RecipeAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B4E694F22B9223B600704020 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4E694F12B9223B600704020 /* Info.plist */; };
 		B4E694F62B9226A400704020 /* ApiRouteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E694F52B9226A400704020 /* ApiRouteProtocol.swift */; };
 		B4E694F92B92272000704020 /* MimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E694F82B92272000704020 /* MimeType.swift */; };
 		B4E694FE2B9227AD00704020 /* HttpHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E694FB2B9227AD00704020 /* HttpHeader.swift */; };
@@ -43,7 +42,6 @@
 		B4E694D72B9218CE00704020 /* RecipeAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E694DC2B9218CE00704020 /* RecipeAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeAPITests.swift; sourceTree = "<group>"; };
 		B4E694F02B92232800704020 /* APIConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = APIConfig.xcconfig; sourceTree = "<group>"; };
-		B4E694F12B9223B600704020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4E694F52B9226A400704020 /* ApiRouteProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRouteProtocol.swift; sourceTree = "<group>"; };
 		B4E694F82B92272000704020 /* MimeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MimeType.swift; sourceTree = "<group>"; };
 		B4E694FB2B9227AD00704020 /* HttpHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpHeader.swift; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				B4E694F02B92232800704020 /* APIConfig.xcconfig */,
-				B4E694F12B9223B600704020 /* Info.plist */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -274,7 +271,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4E694F22B9223B600704020 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,7 +377,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Support/Info.plist;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -441,7 +436,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Support/Info.plist;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
