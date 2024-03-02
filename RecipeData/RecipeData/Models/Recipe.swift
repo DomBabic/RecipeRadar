@@ -21,8 +21,19 @@ public struct Recipe: Codable {
     public let ingredients: [Ingredient]
     /// ``Nutrients`` object containing data on the meal macro and energy informations.
     public let totalNutrients: Nutrients
+    /// ``Nutrients`` object containing total daily intake for each individual macro nutrient.
+    public let totalDaily: Nutrients
+    /// Time it takes to prepare a meal.
+    public let totalTime: Double
     
     enum CodingKeys: String, CodingKey {
-        case label, image, url, yield, ingredients, totalNutrients
+        case label
+        case image
+        case url
+        case yield
+        case ingredients
+        case totalNutrients
+        case totalDaily
+        case totalTime
     }
 }
