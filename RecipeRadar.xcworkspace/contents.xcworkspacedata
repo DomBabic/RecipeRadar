@@ -7,4 +7,7 @@
    <FileRef
       location = "group:RecipeData/RecipeData.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:RecipeRadar/RecipeRadar.xcodeproj">
+   </FileRef>
 </Workspace>
