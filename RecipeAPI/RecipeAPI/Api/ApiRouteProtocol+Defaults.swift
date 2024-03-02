@@ -32,8 +32,8 @@ extension ApiRouteProtocol {
         }
         
         let params: QueryParameters = [
-            ApiConstants.Query.appId.rawValue: appId,
-            ApiConstants.Query.appKey.rawValue: appKey
+            ApiConstants.Query.appId: appId,
+            ApiConstants.Query.appKey: appKey
         ]
         
         return params

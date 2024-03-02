@@ -25,9 +25,9 @@ public struct RecipeRoute: ApiRouteProtocol {
         
         let const = ApiConstants.Query.self
         
-        defaults[const.query.rawValue] = recipe
-        defaults[const.from.rawValue] = "\(from)"
-        defaults[const.to.rawValue] = "\(to)"
+        defaults[const.query] = recipe
+        defaults[const.from] = "\(from)"
+        defaults[const.to] = "\(to)"
         
         return defaults
     }
