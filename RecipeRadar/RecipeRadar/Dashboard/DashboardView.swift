@@ -40,7 +40,9 @@ struct DashboardView: View {
     
     var searchBar: some View {
         SearchBar(text: $viewModel.text, placeholder: "Search recipes") {
-            // TODO: VM call
+            Task {
+                await viewModel.fetchData()
+            }
         }
     }
     
@@ -69,12 +71,15 @@ struct DashboardView: View {
     
     var dataView: some View {
         ScrollView {
-            LazyVGrid(columns: columns, spacing: 16) {
+            LazyVGrid(columns: columns, spacing: 8) {
                 ForEach(viewModel.data, id: \.self) { item in
                     RecipeGridItem(recipe: item)
                 }
             }
         }
+        .padding(.all, 4)
+        .background(background)
+        .clipShape(RoundedRectangle(cornerRadius: 16))
     }
     
     var background: some View {
