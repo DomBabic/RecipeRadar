@@ -43,7 +43,7 @@ public final class NetworkService: NetworkServiceProtocol {
     ///
     /// - Parameters:
     ///     - session: URLSession used to perform network requests.
-    init(session: URLSession = .shared) {
+    public init(session: URLSession = .shared) {
         self.session = session
     }
     
