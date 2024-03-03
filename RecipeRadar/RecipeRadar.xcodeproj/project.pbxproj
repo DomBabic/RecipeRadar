@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B497064C2B94834900ADB71C /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B497064B2B94834900ADB71C /* DashboardView.swift */; };
+		B497064F2B9483D400ADB71C /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B497064E2B9483D400ADB71C /* SearchBar.swift */; };
+		B49706512B94858C00ADB71C /* BorderedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49706502B94858C00ADB71C /* BorderedBackground.swift */; };
+		B49706532B94876700ADB71C /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49706522B94876700ADB71C /* DashboardViewModel.swift */; };
+		B49706562B9487DB00ADB71C /* RecipeAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49706552B9487DB00ADB71C /* RecipeAPI.framework */; };
+		B49706572B9487DB00ADB71C /* RecipeAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B49706552B9487DB00ADB71C /* RecipeAPI.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B497065A2B9487E600ADB71C /* RecipeData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49706592B9487E600ADB71C /* RecipeData.framework */; };
+		B497065B2B9487E600ADB71C /* RecipeData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B49706592B9487E600ADB71C /* RecipeData.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B497065F2B948B5A00ADB71C /* RecipeGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B497065E2B948B5A00ADB71C /* RecipeGridItem.swift */; };
 		B4E695942B9351C500704020 /* RecipeRadarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695932B9351C500704020 /* RecipeRadarApp.swift */; };
-		B4E695962B9351C500704020 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695952B9351C500704020 /* ContentView.swift */; };
 		B4E695982B9351C600704020 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E695972B9351C600704020 /* Assets.xcassets */; };
 		B4E695A52B9351C600704020 /* RecipeRadarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695A42B9351C600704020 /* RecipeRadarTests.swift */; };
 		B4E695AF2B9351C600704020 /* RecipeRadarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695AE2B9351C600704020 /* RecipeRadarUITests.swift */; };
@@ -32,10 +40,31 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B49706582B9487DB00ADB71C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B497065B2B9487E600ADB71C /* RecipeData.framework in Embed Frameworks */,
+				B49706572B9487DB00ADB71C /* RecipeAPI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B497064B2B94834900ADB71C /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		B497064E2B9483D400ADB71C /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		B49706502B94858C00ADB71C /* BorderedBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedBackground.swift; sourceTree = "<group>"; };
+		B49706522B94876700ADB71C /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		B49706552B9487DB00ADB71C /* RecipeAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RecipeAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B49706592B9487E600ADB71C /* RecipeData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RecipeData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B497065E2B948B5A00ADB71C /* RecipeGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeGridItem.swift; sourceTree = "<group>"; };
 		B4E695902B9351C500704020 /* RecipeRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E695932B9351C500704020 /* RecipeRadarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRadarApp.swift; sourceTree = "<group>"; };
-		B4E695952B9351C500704020 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B4E695972B9351C600704020 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4E695A02B9351C600704020 /* RecipeRadarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeRadarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E695A42B9351C600704020 /* RecipeRadarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRadarTests.swift; sourceTree = "<group>"; };
@@ -49,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B497065A2B9487E600ADB71C /* RecipeData.framework in Frameworks */,
+				B49706562B9487DB00ADB71C /* RecipeAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +100,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B49706482B94832E00ADB71C /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				B497064D2B9483CA00ADB71C /* Views */,
+				B497064B2B94834900ADB71C /* DashboardView.swift */,
+				B49706522B94876700ADB71C /* DashboardViewModel.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		B497064D2B9483CA00ADB71C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B49706502B94858C00ADB71C /* BorderedBackground.swift */,
+				B497065E2B948B5A00ADB71C /* RecipeGridItem.swift */,
+				B497064E2B9483D400ADB71C /* SearchBar.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B49706542B9487DB00ADB71C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B49706592B9487E600ADB71C /* RecipeData.framework */,
+				B49706552B9487DB00ADB71C /* RecipeAPI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B4E695872B9351C500704020 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +136,7 @@
 				B4E695A32B9351C600704020 /* RecipeRadarTests */,
 				B4E695AD2B9351C600704020 /* RecipeRadarUITests */,
 				B4E695912B9351C500704020 /* Products */,
+				B49706542B9487DB00ADB71C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,8 +153,8 @@
 		B4E695922B9351C500704020 /* RecipeRadar */ = {
 			isa = PBXGroup;
 			children = (
+				B49706482B94832E00ADB71C /* Dashboard */,
 				B4E695932B9351C500704020 /* RecipeRadarApp.swift */,
-				B4E695952B9351C500704020 /* ContentView.swift */,
 				B4E695972B9351C600704020 /* Assets.xcassets */,
 			);
 			path = RecipeRadar;
@@ -126,6 +187,7 @@
 				B4E6958C2B9351C500704020 /* Sources */,
 				B4E6958D2B9351C500704020 /* Frameworks */,
 				B4E6958E2B9351C500704020 /* Resources */,
+				B49706582B9487DB00ADB71C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -245,8 +307,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4E695962B9351C500704020 /* ContentView.swift in Sources */,
+				B497064C2B94834900ADB71C /* DashboardView.swift in Sources */,
+				B49706532B94876700ADB71C /* DashboardViewModel.swift in Sources */,
 				B4E695942B9351C500704020 /* RecipeRadarApp.swift in Sources */,
+				B49706512B94858C00ADB71C /* BorderedBackground.swift in Sources */,
+				B497065F2B948B5A00ADB71C /* RecipeGridItem.swift in Sources */,
+				B497064F2B9483D400ADB71C /* SearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

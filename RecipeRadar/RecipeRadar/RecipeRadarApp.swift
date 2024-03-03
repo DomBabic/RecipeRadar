@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import RecipeAPI
 
 @main
 struct RecipeRadarApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DashboardView(viewModel: .init(networkService: NetworkService()))
         }
     }
 }
