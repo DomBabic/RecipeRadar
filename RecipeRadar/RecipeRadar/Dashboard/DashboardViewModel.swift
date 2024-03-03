@@ -22,6 +22,8 @@ final class DashboardViewModel: ObservableObject {
     @Published var text: String = ""
     @Published var data: [Recipe] = []
     
+    @Published var error: Error?
+    
     init(networkService: NetworkServiceProtocol) {
         self.networkService = networkService
         
@@ -38,4 +40,17 @@ final class DashboardViewModel: ObservableObject {
     }
 
     // TODO: Method for network request
+    @MainActor
+    func fetchData() async {
+        do {
+            let route = RecipeRoute(recipe: text, from: 0, to: 10)
+            let url = try route.apiURL()
+            let request = URLRequest(url: url)
+            
+            let recipeList: RecipeList = try await networkService.request(request)
+            data = recipeList.hits.map { $0.recipe }
+        } catch let apiError {
+            error = apiError
+        }
+    }
 }
