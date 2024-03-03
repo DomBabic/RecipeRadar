@@ -58,7 +58,13 @@ final class DashboardViewModel: ObservableObject {
             
             let recipeList: RecipeList = try await networkService.request(request)
             
-            data = recipeList.hits.map { $0.recipe }
+            let newRecipes = recipeList.hits.map { $0.recipe }
+            
+            if didChange {
+                data = newRecipes
+            } else {
+                data += newRecipes
+            }
             
             let totalCount = recipeList.count
             hasMore = recipeList.more
