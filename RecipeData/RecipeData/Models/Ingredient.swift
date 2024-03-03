@@ -12,7 +12,7 @@ public struct Ingredient: Codable {
     /// Detailed description of the ingredient (e.g. "1/2 cup of olive oil").
     public let text: String
     /// Image resource for an ingredient.
-    public let image: String
+    public let image: String?
     
     enum CodingKeys: String, CodingKey {
         case text, image
