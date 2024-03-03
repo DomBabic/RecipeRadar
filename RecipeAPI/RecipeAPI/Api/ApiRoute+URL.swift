@@ -46,7 +46,7 @@ extension ApiRouteProtocol {
     ///     `URL` from formatted base API URL `String`.
     ///
     /// - Throws: ``ApiError`` indicating that URL formatting had failed.
-    func apiURL() throws -> URL {
+    public func apiURL() throws -> URL {
         let urlString = try formattedUrlString()
         
         guard let url = URL(string: urlString) else {
