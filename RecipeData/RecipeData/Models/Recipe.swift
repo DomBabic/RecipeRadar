@@ -37,3 +37,23 @@ public struct Recipe: Codable {
         case totalTime
     }
 }
+
+extension Recipe: Identifiable {
+    public var id: UUID { UUID() }
+}
+
+extension Recipe: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(label)
+        hasher.combine(image)
+        hasher.combine(url)
+        hasher.combine(yield)
+    }
+    
+    public static func == (lhs: Recipe, rhs: Recipe) -> Bool {
+        return lhs.label == rhs.label &&
+            lhs.image == rhs.image &&
+            lhs.url == rhs.url &&
+            lhs.yield == rhs.yield
+    }
+}
