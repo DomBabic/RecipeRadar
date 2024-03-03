@@ -13,52 +13,75 @@ struct RecipeGridItem: View {
     let recipe: Recipe
     
     var body: some View {
-        VStack(spacing: 8) {
-            ZStack(alignment: .topLeading) {
-                image
-                
-                prepHolder
-            }
-            
-            title
-        }
-    }
-    
-    var image: some View {
-        AsyncImage(url: nil) { image in
+        ZStack(alignment: .topLeading) {
             image
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 150, height: 150)
-        } placeholder: {
-            ProgressView()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 150, height: 150)
-                .background(Color.gray.opacity(0.05))
+            
+            prepHolder
+            
+            titleHolder
         }
         .clipShape(RoundedRectangle(cornerRadius: 16))
     }
     
-    var title: some View {
-        Text(recipe.label)
-            .lineLimit(2)
+    var image: some View {
+        AsyncImage(url: URL(string: recipe.image)) { image in
+            image
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(height: 150)
+                .frame(maxWidth: .infinity)
+        } placeholder: {
+            ProgressView()
+                .aspectRatio(contentMode: .fill)
+                .frame(height: 150)
+                .frame(maxWidth: .infinity)
+                .background(Color.gray.opacity(0.05))
+        }
     }
     
-    var prepHolder: some View {
-        HStack {
-            prepTime
-            
+    var titleHolder: some View {
+        VStack {
             Spacer()
+            
+            HStack {
+                Spacer()
+                
+                title
+                
+                Spacer()
+            }
         }
-        .padding(.all, 16)
+        .padding(.bottom, 8)
+    }
+    
+    var title: some View {
+        Text(recipe.label)
+            .font(.footnote)
+            .lineLimit(1, reservesSpace: true)
+            .padding(.horizontal, 8)
+            .padding(.vertical, 6)
+            .background(Color.white)
+            .clipShape(Capsule())
+    }
+    
+    @ViewBuilder
+    var prepHolder: some View {
+        if recipe.totalTime != 0 {
+            HStack {
+                prepTime
+                
+                Spacer()
+            }
+            .padding(.all, 16)
+        }
     }
     
     var prepTime: some View {
-        Text("\(recipe.totalTime) min.")
+        Text("\(Int(recipe.totalTime)) min.")
             .font(.footnote)
             .padding(.horizontal, 8)
             .padding(.vertical, 6)
-            .background(Color.orange.opacity(0.5))
+            .background(Color.orange.opacity(0.9))
             .clipShape(Capsule())
     }
 }
