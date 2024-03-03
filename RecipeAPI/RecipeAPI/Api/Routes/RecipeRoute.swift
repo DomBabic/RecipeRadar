@@ -35,6 +35,12 @@ public struct RecipeRoute: ApiRouteProtocol {
     public var headers: [HttpHeader] { defaultHeaders }
     
     public var body: Data? { nil }
+    
+    public init(recipe: String, from: Int, to: Int) {
+        self.recipe = recipe
+        self.from = from
+        self.to = to
+    }
 }
 
 //
