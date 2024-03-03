@@ -71,15 +71,47 @@ struct DashboardView: View {
     
     var dataView: some View {
         ScrollView {
-            LazyVGrid(columns: columns, spacing: 8) {
-                ForEach(viewModel.data, id: \.self) { item in
-                    RecipeGridItem(recipe: item)
+            VStack(spacing: 4) {
+                spacing
+                
+                LazyVGrid(columns: columns, spacing: 8) {
+                    ForEach(viewModel.data, id: \.self) { item in
+                        RecipeGridItem(recipe: item)
+                    }
                 }
+                
+                showMore
+                
+                spacing
             }
         }
-        .padding(.all, 4)
+        .padding(.horizontal, 4)
         .background(background)
         .clipShape(RoundedRectangle(cornerRadius: 16))
+    }
+    
+    var spacing: some View {
+        Spacer()
+            .frame(height: 0)
+    }
+    
+    @ViewBuilder
+    var showMore: some View {
+        if viewModel.hasMore {
+            Button {
+                Task {
+                    await viewModel.fetchData()
+                }
+            } label: {
+                Text("Show more")
+                    .font(.footnote)
+            }
+            .tint(.white)
+            .padding(.horizontal, 12)
+            .padding(.vertical, 8)
+            .background(Color.blue.opacity(0.8))
+            .clipShape(Capsule())
+        }
     }
     
     var background: some View {
