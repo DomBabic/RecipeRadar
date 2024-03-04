@@ -30,6 +30,9 @@ struct DashboardView: View {
         }
         .padding(.horizontal, 24)
         .padding(.vertical, 16)
+        .sheet(item: $viewModel.selectedRecipe) { item in
+            RecipeDetailsView(viewModel: .init(recipe: item))
+        }
     }
     
     var title: some View {
@@ -77,6 +80,9 @@ struct DashboardView: View {
                 LazyVGrid(columns: columns, spacing: 8) {
                     ForEach(viewModel.data, id: \.self) { item in
                         RecipeGridItem(recipe: item)
+                            .onTapGesture {
+                                viewModel.selectedRecipe = item
+                            }
                     }
                 }
                 

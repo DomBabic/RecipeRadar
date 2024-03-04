@@ -32,6 +32,9 @@ final class DashboardViewModel: ObservableObject {
     /// Flag indicating whether or not there are more available results.
     @Published var hasMore = true
     
+    /// Indicates selected recipe
+    @Published var selectedRecipe: Recipe?
+    
     /// Error indicating that something went wrong when fetching data.
     @Published var error: Error?
     
