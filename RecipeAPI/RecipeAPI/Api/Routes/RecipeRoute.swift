@@ -36,6 +36,12 @@ public struct RecipeRoute: ApiRouteProtocol {
     
     public var body: Data? { nil }
     
+    /// Default initialiser for RecipeRoute struct.
+    ///
+    /// - Parameters:
+    ///     - recipe: String representing user's query.
+    ///     - from: Integer indicating the start of the results page.
+    ///     - to: Integer indicating an end of the results page.
     public init(recipe: String, from: Int, to: Int) {
         self.recipe = recipe
         self.from = from
