@@ -12,15 +12,15 @@ public enum DietLabel: String, Codable, CaseIterableDefaultFirst {
     /// Default unknown case.
     case unknown
     /// Represents balanced diet.
-    case balanced
+    case balanced = "Balanced"
     /// Represents diet rich in protein.
-    case highProtein = "high-protein"
+    case highProtein = "High-Protein"
     /// Represents diet rich in fiber.
-    case highFiber = "high-fiber"
+    case highFiber = "High-Fiber"
     /// Represents low-fat diet.
-    case lowFat = "low-fat"
+    case lowFat = "Low-Fat"
     /// Represents low-carb diet.
-    case lowCarb = "low-carb"
+    case lowCarb = "Low-Carb"
     /// Represents low-sodium diet.
-    case lowSodium = "low-sodium"
+    case lowSodium = "Low-Sodium"
 }

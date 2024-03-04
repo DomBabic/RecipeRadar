@@ -12,31 +12,31 @@ public enum HealthLabel: String, Codable, CaseIterableDefaultFirst {
     /// Default unknown case.
     case unknown
     /// Label used for vegan ``Recipe``.
-    case vegan
+    case vegan = "Vegan"
     /// Label used for vegetarian ``Recipe``.
-    case vegetarian
+    case vegetarian = "Vegetarian"
     /// Label used for paleo ``Recipe``.
-    case paleo
+    case paleo = "Paleo"
     /// Label used for dairy-free ``Recipe``.
-    case dairyFree = "dairy-free"
+    case dairyFree = "Dairy-Free"
     /// Label used for gluten-free ``Recipe``.
-    case glutenFree = "gluten-free"
+    case glutenFree = "Gluten-Free"
     /// Label used for wheat-free ``Recipe``.
-    case wheatFree = "wheat-free"
+    case wheatFree = "Wheat-Free"
     /// Label used for fat-free ``Recipe``.
-    case fatFree = "fat-free"
+    case fatFree = "Fat-Free"
     /// Label used for low-sugar ``Recipe``.
-    case lowSugar = "low-sugar"
+    case lowSugar = "Low Sugar"
     /// Label used for egg-free ``Recipe``.
-    case eggFree = "egg-free"
+    case eggFree = "Egg-Free"
     /// Label used for peanut-free ``Recipe``.
-    case peanutFree = "peanut-free"
+    case peanutFree = "Peanut-Free"
     /// Label used for nut-free ``Recipe``.
-    case treeNutFree = "tree-nut-free"
+    case treeNutFree = "Tree-Nut-Free"
     /// Label used for soy-free ``Recipe``.
-    case soyFree = "soy-free"
+    case soyFree = "Soy-Free"
     /// Label used for fish-free ``Recipe``.
-    case fishFree = "fish-free"
+    case fishFree = "Fish-Free"
     /// Label used for shellfish-free ``Recipe``.
-    case shellfishFree = "shellfish-free"
+    case shellfishFree = "Shellfish-Free"
 }
