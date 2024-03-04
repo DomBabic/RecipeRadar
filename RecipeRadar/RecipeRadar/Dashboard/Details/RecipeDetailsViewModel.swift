@@ -26,7 +26,9 @@ final class RecipeDetailsViewModel: ObservableObject {
     /// ``MacroData`` array used to visualise macronutrient data through charts and info stacks.
     @Published var macroData: [MacroData]
     
+    /// Array of `HealthLabel` cases displayed via UI.
     @Published var healthLabels: [HealthLabel]
+    /// Array of `DietLabel` cases displayed via UI.
     @Published var dietLabels: [DietLabel]
     
     /// Default initialiser for ``RecipeDetailsViewModel``.
