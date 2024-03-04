@@ -32,16 +32,48 @@ final class DashboardViewUITests: XCTestCase {
         let searchTextField = app.textFields["dashboard.searchBar"]
         
         XCTAssertTrue(searchTextField.exists)
-        XCTAssertEqual(searchTextField.label, "")
         
         searchTextField.tap()
         
         searchTextField.typeText("Chicken")
         
-        try await Task.sleep(nanoseconds: 500000000)
+        try await Task.sleep(nanoseconds: 1000000000)
         
-        XCTAssertEqual(searchTextField.label, "Chicken")
+        searchButton.tap()
         
-        searchTextField
+        let predicate = NSPredicate(format: "exists == true")
+        let viewExistenceExpectation = expectation(for: predicate,
+                                                   evaluatedWith: app.scrollViews["dashboard.dataView"],
+                                                   handler: nil)
+
+        await fulfillment(of: [viewExistenceExpectation], timeout: 5)
+        
+        let scrollView = app.scrollViews["dashboard.dataView"]
+        
+        XCTAssertTrue(scrollView.exists)
+        
+        scrollView.swipeUp()
+        
+        let showMore = app.buttons["dashboard.showMore"]
+        
+        XCTAssertTrue(showMore.exists)
+        
+        let grid = scrollView.otherElements["dashboard.grid"]
+        
+        XCTAssertTrue(grid.exists)
+        
+        let gridItem = grid.staticTexts["recipe.gridItem.title"].firstMatch
+        
+        XCTAssertTrue(gridItem.exists)
+        
+        gridItem.tap()
+        
+        try await Task.sleep(nanoseconds: 1000000000)
+        
+        let detailsTitle = app.staticTexts["details.title"]
+        
+        XCTAssertTrue(detailsTitle.exists)
+        XCTAssertEqual(detailsTitle.label, gridItem.label)
     }
 }
+
