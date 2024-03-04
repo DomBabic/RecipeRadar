@@ -22,9 +22,11 @@
 		B49706732B95E2E300ADB71C /* MacroData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49706722B95E2E300ADB71C /* MacroData.swift */; };
 		B49706782B95EA8200ADB71C /* MacroDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49706772B95EA8200ADB71C /* MacroDataTests.swift */; };
 		B497067A2B95EB2D00ADB71C /* RecipeDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49706792B95EB2D00ADB71C /* RecipeDetailsViewModelTests.swift */; };
+		B497067C2B95FBC000ADB71C /* DashboardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B497067B2B95FBC000ADB71C /* DashboardViewModelTests.swift */; };
+		B497067F2B95FD0900ADB71C /* XCTestCase+Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B497067E2B95FD0900ADB71C /* XCTestCase+Recipe.swift */; };
+		B49706822B96016900ADB71C /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49706812B96016900ADB71C /* MockNetworkService.swift */; };
 		B4E695942B9351C500704020 /* RecipeRadarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695932B9351C500704020 /* RecipeRadarApp.swift */; };
 		B4E695982B9351C600704020 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E695972B9351C600704020 /* Assets.xcassets */; };
-		B4E695A52B9351C600704020 /* RecipeRadarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695A42B9351C600704020 /* RecipeRadarTests.swift */; };
 		B4E695AF2B9351C600704020 /* RecipeRadarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695AE2B9351C600704020 /* RecipeRadarUITests.swift */; };
 		B4E695B12B9351C600704020 /* RecipeRadarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695B02B9351C600704020 /* RecipeRadarUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
@@ -75,11 +77,13 @@
 		B49706722B95E2E300ADB71C /* MacroData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroData.swift; sourceTree = "<group>"; };
 		B49706772B95EA8200ADB71C /* MacroDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroDataTests.swift; sourceTree = "<group>"; };
 		B49706792B95EB2D00ADB71C /* RecipeDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		B497067B2B95FBC000ADB71C /* DashboardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModelTests.swift; sourceTree = "<group>"; };
+		B497067E2B95FD0900ADB71C /* XCTestCase+Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Recipe.swift"; sourceTree = "<group>"; };
+		B49706812B96016900ADB71C /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
 		B4E695902B9351C500704020 /* RecipeRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E695932B9351C500704020 /* RecipeRadarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRadarApp.swift; sourceTree = "<group>"; };
 		B4E695972B9351C600704020 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4E695A02B9351C600704020 /* RecipeRadarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeRadarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4E695A42B9351C600704020 /* RecipeRadarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRadarTests.swift; sourceTree = "<group>"; };
 		B4E695AA2B9351C600704020 /* RecipeRadarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeRadarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E695AE2B9351C600704020 /* RecipeRadarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRadarUITests.swift; sourceTree = "<group>"; };
 		B4E695B02B9351C600704020 /* RecipeRadarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRadarUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				B49706752B95EA7000ADB71C /* Details */,
+				B497067B2B95FBC000ADB71C /* DashboardViewModelTests.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -192,6 +197,22 @@
 				B49706772B95EA8200ADB71C /* MacroDataTests.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B497067D2B95FCF400ADB71C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B497067E2B95FD0900ADB71C /* XCTestCase+Recipe.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B49706802B96015500ADB71C /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				B49706812B96016900ADB71C /* MockNetworkService.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		B4E695872B9351C500704020 = {
@@ -228,8 +249,9 @@
 		B4E695A32B9351C600704020 /* RecipeRadarTests */ = {
 			isa = PBXGroup;
 			children = (
+				B497067D2B95FCF400ADB71C /* Extensions */,
+				B49706802B96015500ADB71C /* Mocks */,
 				B49706742B95EA5F00ADB71C /* Dashboard */,
-				B4E695A42B9351C600704020 /* RecipeRadarTests.swift */,
 			);
 			path = RecipeRadarTests;
 			sourceTree = "<group>";
@@ -390,9 +412,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B49706822B96016900ADB71C /* MockNetworkService.swift in Sources */,
 				B497067A2B95EB2D00ADB71C /* RecipeDetailsViewModelTests.swift in Sources */,
 				B49706782B95EA8200ADB71C /* MacroDataTests.swift in Sources */,
-				B4E695A52B9351C600704020 /* RecipeRadarTests.swift in Sources */,
+				B497067F2B95FD0900ADB71C /* XCTestCase+Recipe.swift in Sources */,
+				B497067C2B95FBC000ADB71C /* DashboardViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
