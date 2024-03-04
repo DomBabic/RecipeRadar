@@ -22,7 +22,7 @@ struct RecipeDetailsView: View {
                 
                 details
                 
-                nutritionInfo
+                nutritionHolder
                 
                 ingredients
                 
@@ -45,10 +45,14 @@ struct RecipeDetailsView: View {
     }
     
     var details: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: 16) {
             recipeTitle
             
             servings
+            
+            dietInfo
+            
+            healthInfo
         }
         .padding(.horizontal, 24)
     }
@@ -67,11 +71,73 @@ struct RecipeDetailsView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
     }
     
-    var nutritionInfo: some View {
-        HStack(spacing: 24) {
-            Spacer()
-                .frame(width: 0)
+    @ViewBuilder
+    var dietInfo: some View {
+        if !viewModel.dietLabels.isEmpty {
+            VStack(alignment: .leading, spacing: 8) {
+                dietTitle
+                
+                dietLabels
+            }
+        }
+    }
+    
+    var dietTitle: some View {
+        Text("Type of diet:")
+            .font(.headline)
+            .fontWeight(.semibold)
+    }
+    
+    var dietLabels: some View {
+        Text(viewModel.dietLabels.map { $0.rawValue }.joined(separator: ", "))
+            .font(.footnote)
+            .fontWeight(.semibold)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .lineLimit(2)
+    }
+    
+    @ViewBuilder
+    var healthInfo: some View {
+        if !viewModel.healthLabels.isEmpty {
+            VStack(alignment: .leading, spacing: 4) {
+                healthTitle
+                
+                healthLabels
+            }
+        }
+    }
+    
+    var healthTitle: some View {
+        Text("Health labels:")
+            .font(.headline)
+            .fontWeight(.semibold)
+    }
+    
+    var healthLabels: some View {
+        Text(viewModel.healthLabels.map { $0.rawValue }.joined(separator: ", "))
+            .font(.footnote)
+            .fontWeight(.semibold)
+            .frame(maxWidth: .infinity, alignment: .leading)
+    }
+    
+    var nutritionHolder: some View {
+        VStack(spacing: 12) {
+            nutritionTitle
             
+            nutritionInfo
+        }
+        .padding(.horizontal, 24)
+    }
+    
+    var nutritionTitle: some View {
+        Text("Nutrition")
+            .font(.title2)
+            .fontWeight(.semibold)
+            .frame(maxWidth: .infinity, alignment: .leading)
+    }
+    
+    var nutritionInfo: some View {
+        HStack(spacing: 16) {
             macroChart
             
             ForEach(viewModel.macroData) { data in
@@ -90,9 +156,6 @@ struct RecipeDetailsView: View {
                         .fontWeight(.thin)
                 }
             }
-            
-            Spacer()
-                .frame(width: 0)
         }
     }
     
@@ -117,7 +180,7 @@ struct RecipeDetailsView: View {
         }
         .chartForegroundStyleScale(domain: viewModel.macroData.map { $0.title },
                                    range: viewModel.macroData.map { $0.color })
-        .chartLegend(position: .automatic, alignment: .center)
+        .chartLegend(position: .leading, alignment: .center)
     }
     
     var ingredients: some View {
