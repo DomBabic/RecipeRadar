@@ -27,7 +27,6 @@
 		B49706822B96016900ADB71C /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49706812B96016900ADB71C /* MockNetworkService.swift */; };
 		B4E695942B9351C500704020 /* RecipeRadarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695932B9351C500704020 /* RecipeRadarApp.swift */; };
 		B4E695982B9351C600704020 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E695972B9351C600704020 /* Assets.xcassets */; };
-		B4E695AF2B9351C600704020 /* RecipeRadarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695AE2B9351C600704020 /* RecipeRadarUITests.swift */; };
 		B4E695B12B9351C600704020 /* RecipeRadarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695B02B9351C600704020 /* RecipeRadarUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -85,7 +84,6 @@
 		B4E695972B9351C600704020 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4E695A02B9351C600704020 /* RecipeRadarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeRadarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E695AA2B9351C600704020 /* RecipeRadarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeRadarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4E695AE2B9351C600704020 /* RecipeRadarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRadarUITests.swift; sourceTree = "<group>"; };
 		B4E695B02B9351C600704020 /* RecipeRadarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRadarUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -259,7 +257,6 @@
 		B4E695AD2B9351C600704020 /* RecipeRadarUITests */ = {
 			isa = PBXGroup;
 			children = (
-				B4E695AE2B9351C600704020 /* RecipeRadarUITests.swift */,
 				B4E695B02B9351C600704020 /* RecipeRadarUITestsLaunchTests.swift */,
 			);
 			path = RecipeRadarUITests;
@@ -424,7 +421,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4E695AF2B9351C600704020 /* RecipeRadarUITests.swift in Sources */,
 				B4E695B12B9351C600704020 /* RecipeRadarUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
