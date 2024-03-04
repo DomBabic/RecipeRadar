@@ -10,37 +10,26 @@ import Combine
 import RecipeData
 import SwiftUI
 
-struct MacroData: Identifiable {
-    var title: String
-    var value: Double
-    var total: Double
-    var color: Color
-    
-    var percentile: Int
-    
-    init(title: String, value: Double, total: Double, color: Color) {
-        self.title = title
-        self.value = value
-        self.total = total
-        self.color = color
-        
-        self.percentile = Int((value / total) * 100)
-    }
-    
-    var id: String { title }
-}
-
+/// ViewModel used to present `Recipe` information in detailed view.
 final class RecipeDetailsViewModel: ObservableObject {
     
     // MARK: - Publishers
+    /// URL pointing to image resource.
     @Published var image: String
+    /// Title of the recipe.
     @Published var title: String
+    /// Number of servings per meal.
     @Published var servings: Double
+    /// Array of ingredients used to prepare the meal.
     @Published var ingredients: [Ingredient]
     
-    @Published var totalAmount: Double
+    /// ``MacroData`` array used to visualise macronutrient data through charts and info stacks.
     @Published var macroData: [MacroData]
     
+    /// Default initialiser for ``RecipeDetailsViewModel``.
+    ///
+    /// - Parameters:
+    ///     - recipe: `Recipe` data to be used in the associated View.
     init(recipe: Recipe) {
         self.image = recipe.image
         self.title = recipe.label
@@ -50,7 +39,6 @@ final class RecipeDetailsViewModel: ObservableObject {
         
         let nutrients = recipe.totalNutrients
         let total = (nutrients.carbs.quantity + nutrients.fat.quantity + nutrients.protein.quantity) / yield
-        self.totalAmount = total
         
         let dataFor: (Nutrient, Color) -> MacroData = { (nutrient, color) in
             return .init(title: nutrient.label,
