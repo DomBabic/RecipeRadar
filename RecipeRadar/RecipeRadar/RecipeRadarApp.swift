@@ -13,6 +13,7 @@ struct RecipeRadarApp: App {
     var body: some Scene {
         WindowGroup {
             DashboardView(viewModel: .init(networkService: NetworkService()))
+                .preferredColorScheme(.light)
         }
     }
 }
