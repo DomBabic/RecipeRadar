@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B47B62D12B96594700CA7B84 /* DashboardViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47B62D02B96594700CA7B84 /* DashboardViewUITests.swift */; };
 		B497064C2B94834900ADB71C /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B497064B2B94834900ADB71C /* DashboardView.swift */; };
 		B497064F2B9483D400ADB71C /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B497064E2B9483D400ADB71C /* SearchBar.swift */; };
 		B49706512B94858C00ADB71C /* BorderedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49706502B94858C00ADB71C /* BorderedBackground.swift */; };
@@ -63,6 +64,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B47B62D02B96594700CA7B84 /* DashboardViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewUITests.swift; sourceTree = "<group>"; };
 		B497064B2B94834900ADB71C /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		B497064E2B9483D400ADB71C /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		B49706502B94858C00ADB71C /* BorderedBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedBackground.swift; sourceTree = "<group>"; };
@@ -114,6 +116,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B47B62CF2B96591900CA7B84 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				B47B62D02B96594700CA7B84 /* DashboardViewUITests.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
 		B49706482B94832E00ADB71C /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +267,7 @@
 		B4E695AD2B9351C600704020 /* RecipeRadarUITests */ = {
 			isa = PBXGroup;
 			children = (
+				B47B62CF2B96591900CA7B84 /* Dashboard */,
 				B4E695B02B9351C600704020 /* RecipeRadarUITestsLaunchTests.swift */,
 			);
 			path = RecipeRadarUITests;
@@ -422,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4E695B12B9351C600704020 /* RecipeRadarUITestsLaunchTests.swift in Sources */,
+				B47B62D12B96594700CA7B84 /* DashboardViewUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
