@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B49706612B95B7C600ADB71C /* DietLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49706602B95B7C600ADB71C /* DietLabel.swift */; };
+		B49706642B95B9A600ADB71C /* CaseIterable+DefaultFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49706632B95B9A600ADB71C /* CaseIterable+DefaultFirst.swift */; };
+		B49706662B95BAC300ADB71C /* HealthLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49706652B95BAC300ADB71C /* HealthLabel.swift */; };
 		B4E694A12B92175D00704020 /* RecipeData.docc in Sources */ = {isa = PBXBuildFile; fileRef = B4E694A02B92175D00704020 /* RecipeData.docc */; };
 		B4E694A72B92175E00704020 /* RecipeData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E6949C2B92175D00704020 /* RecipeData.framework */; };
 		B4E694AC2B92175E00704020 /* RecipeDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E694AB2B92175E00704020 /* RecipeDataTests.swift */; };
@@ -30,6 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B49706602B95B7C600ADB71C /* DietLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietLabel.swift; sourceTree = "<group>"; };
+		B49706632B95B9A600ADB71C /* CaseIterable+DefaultFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CaseIterable+DefaultFirst.swift"; sourceTree = "<group>"; };
+		B49706652B95BAC300ADB71C /* HealthLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthLabel.swift; sourceTree = "<group>"; };
 		B4E6949C2B92175D00704020 /* RecipeData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RecipeData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E6949F2B92175D00704020 /* RecipeData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecipeData.h; sourceTree = "<group>"; };
 		B4E694A02B92175D00704020 /* RecipeData.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = RecipeData.docc; sourceTree = "<group>"; };
@@ -62,6 +68,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B49706622B95B98700ADB71C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B49706632B95B9A600ADB71C /* CaseIterable+DefaultFirst.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B4E694922B92175D00704020 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +115,9 @@
 		B4E694B62B92176800704020 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B49706622B95B98700ADB71C /* Extensions */,
+				B49706602B95B7C600ADB71C /* DietLabel.swift */,
+				B49706652B95BAC300ADB71C /* HealthLabel.swift */,
 				B4E694BC2B92178100704020 /* Ingredient.swift */,
 				B4E694B92B92178100704020 /* Nutrient.swift */,
 				B4E694B72B92178100704020 /* Nutrients.swift */,
@@ -220,12 +237,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B49706612B95B7C600ADB71C /* DietLabel.swift in Sources */,
 				B4E694BD2B92178100704020 /* Nutrients.swift in Sources */,
 				B4E694BE2B92178100704020 /* RecipeList.swift in Sources */,
+				B49706642B95B9A600ADB71C /* CaseIterable+DefaultFirst.swift in Sources */,
 				B4E694C22B92178100704020 /* Ingredient.swift in Sources */,
 				B4E694BF2B92178100704020 /* Nutrient.swift in Sources */,
 				B4E694A12B92175D00704020 /* RecipeData.docc in Sources */,
 				B4E694C12B92178100704020 /* RecipeResult.swift in Sources */,
+				B49706662B95BAC300ADB71C /* HealthLabel.swift in Sources */,
 				B4E694C02B92178100704020 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

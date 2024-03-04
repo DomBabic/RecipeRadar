@@ -25,6 +25,10 @@ public struct Recipe: Codable {
     public let totalDaily: Nutrients
     /// Time it takes to prepare a meal.
     public let totalTime: Double
+    /// Array of enum cases representing the type of diet for a given ``Recipe``.
+    public let dietLabels: [DietLabel]
+    /// Array of enum cases representing a health label for a given ``Recipe``.
+    public let healthLabels: [HealthLabel]
     
     enum CodingKeys: String, CodingKey {
         case label
@@ -35,6 +39,8 @@ public struct Recipe: Codable {
         case totalNutrients
         case totalDaily
         case totalTime
+        case dietLabels
+        case healthLabels
     }
 }
 
