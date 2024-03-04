@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import SwiftUI
 import RecipeAPI
 import RecipeData
 
@@ -35,6 +36,8 @@ final class DashboardViewModel: ObservableObject {
     /// Indicates selected recipe
     @Published var selectedRecipe: Recipe?
     
+    /// Flag indicating whether or not error text should be displayed.
+    @Published var showError = false
     /// Error indicating that something went wrong when fetching data.
     @Published var error: Error?
     
@@ -61,6 +64,13 @@ final class DashboardViewModel: ObservableObject {
                 self?.resetPage()
             }
             .store(in: &cancellables)
+        
+        $error
+            .map { $0 != nil }
+            .sink { [weak self] errorThrown in
+                self?.showError = errorThrown
+            }
+            .store(in: &cancellables)
     }
     
     /// Method used to fetch data from the API.
@@ -72,6 +82,10 @@ final class DashboardViewModel: ObservableObject {
     @MainActor
     func fetchData() async {
         do {
+            withAnimation {
+                error = nil
+            }
+            
             guard hasMore || didChange else { return }
             
             let route = RecipeRoute(recipe: text, from: pageStart, to: pageEnd)
@@ -99,7 +113,9 @@ final class DashboardViewModel: ObservableObject {
                 pageEnd = totalCount
             }
         } catch let apiError {
-            error = apiError
+            withAnimation {
+                error = apiError
+            }
         }
     }
     

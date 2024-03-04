@@ -24,7 +24,11 @@ struct DashboardView: View {
         VStack(spacing: 24) {
             title
             
-            searchBar
+            VStack(alignment: .leading, spacing: 4) {
+                searchBar
+                
+                errorMessage
+            }
             
             content
         }
@@ -46,6 +50,18 @@ struct DashboardView: View {
             Task {
                 await viewModel.fetchData()
             }
+        }
+    }
+    
+    @ViewBuilder
+    var errorMessage: some View {
+        if viewModel.showError {
+            Text("Something went wrong, please try again later.")
+                .font(.footnote)
+                .fontWeight(.thin)
+                .foregroundStyle(.red)
+                .transition(.opacity.combined(with: .move(edge: .top)))
+                .animation(.easeInOut(duration: 0.33), value: viewModel.showError)
         }
     }
     
