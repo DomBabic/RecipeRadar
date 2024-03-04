@@ -69,7 +69,7 @@ final class DashboardViewModel: ObservableObject {
     @MainActor
     func fetchData() async {
         do {
-            guard hasMore else { return }
+            guard hasMore || didChange else { return }
             
             let route = RecipeRoute(recipe: text, from: pageStart, to: pageEnd)
             let url = try route.apiURL()
