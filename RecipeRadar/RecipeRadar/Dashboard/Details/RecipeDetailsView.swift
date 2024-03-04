@@ -51,6 +51,8 @@ struct RecipeDetailsView: View {
             
             servings
             
+            prepTime
+            
             dietInfo
             
             healthInfo
@@ -72,6 +74,17 @@ struct RecipeDetailsView: View {
             .opacity(0.8)
             .frame(maxWidth: .infinity, alignment: .leading)
             .accessibilityIdentifier("details.servings")
+    }
+    
+    @ViewBuilder
+    var prepTime: some View {
+        if let time = viewModel.prepTime {
+            Text("Prep time: \(time)")
+                .font(.body)
+                .opacity(0.8)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .accessibilityIdentifier("details.prepTime")
+        }
     }
     
     @ViewBuilder
@@ -190,7 +203,7 @@ struct RecipeDetailsView: View {
     @ViewBuilder
     var ingredients: some View {
         if !viewModel.ingredients.isEmpty {
-            VStack(spacing: 16) {
+            VStack(alignment: .leading, spacing: 16) {
                 ingredientsTitle
                 
                 ingredientsList

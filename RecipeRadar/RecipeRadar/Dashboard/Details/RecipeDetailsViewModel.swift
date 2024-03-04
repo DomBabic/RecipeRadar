@@ -18,6 +18,8 @@ final class RecipeDetailsViewModel: ObservableObject {
     @Published var image: String
     /// Title of the recipe.
     @Published var title: String
+    /// Time it takes to prepare the meal.
+    @Published var prepTime: String?
     /// Number of servings per meal.
     @Published var servings: Double
     /// Array of ingredients used to prepare the meal.
@@ -38,6 +40,11 @@ final class RecipeDetailsViewModel: ObservableObject {
     init(recipe: Recipe) {
         self.image = recipe.image
         self.title = recipe.label
+        
+        if recipe.totalTime > 0 {
+            self.prepTime = "\(Int(recipe.totalTime)) min."
+        }
+        
         let yield = recipe.yield
         self.servings = yield
         self.ingredients = recipe.ingredients
