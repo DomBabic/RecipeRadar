@@ -43,6 +43,7 @@ struct DashboardView: View {
         Text("Recipe Radar")
             .font(.headline)
             .fontWeight(.medium)
+            .accessibilityIdentifier("dashboard.title")
     }
     
     var searchBar: some View {
@@ -51,6 +52,7 @@ struct DashboardView: View {
                 await viewModel.fetchData()
             }
         }
+        .accessibilityIdentifier("dashboard.searchBar")
     }
     
     @ViewBuilder
@@ -86,6 +88,7 @@ struct DashboardView: View {
         }
         .frame(maxWidth: .infinity)
         .background(background)
+        .accessibilityIdentifier("dashboard.emptyView")
     }
     
     var dataView: some View {
@@ -110,6 +113,7 @@ struct DashboardView: View {
         .padding(.horizontal, 4)
         .background(background)
         .clipShape(RoundedRectangle(cornerRadius: 16))
+        .accessibilityIdentifier("dashboard.dataView")
     }
     
     var spacing: some View {
@@ -133,6 +137,7 @@ struct DashboardView: View {
             .padding(.vertical, 8)
             .background(Color.blue.opacity(0.8))
             .clipShape(Capsule())
+            .accessibilityIdentifier("dashboard.showMore")
         }
     }
     

@@ -42,6 +42,7 @@ struct RecipeDetailsView: View {
             ProgressView()
                 .aspectRatio(contentMode: .fill)
         }
+        .accessibilityIdentifier("details.image")
     }
     
     var details: some View {
@@ -62,6 +63,7 @@ struct RecipeDetailsView: View {
             .font(.title)
             .fontWeight(.bold)
             .frame(maxWidth: .infinity, alignment: .leading)
+            .accessibilityIdentifier("details.title")
     }
     
     var servings: some View {
@@ -69,6 +71,7 @@ struct RecipeDetailsView: View {
             .font(.body)
             .opacity(0.8)
             .frame(maxWidth: .infinity, alignment: .leading)
+            .accessibilityIdentifier("details.servings")
     }
     
     @ViewBuilder
@@ -86,6 +89,7 @@ struct RecipeDetailsView: View {
         Text("Type of diet:")
             .font(.headline)
             .fontWeight(.semibold)
+            .accessibilityIdentifier("details.diet.title")
     }
     
     var dietLabels: some View {
@@ -94,6 +98,7 @@ struct RecipeDetailsView: View {
             .fontWeight(.semibold)
             .frame(maxWidth: .infinity, alignment: .leading)
             .lineLimit(2)
+            .accessibilityIdentifier("details.diet.labels")
     }
     
     @ViewBuilder
@@ -111,6 +116,7 @@ struct RecipeDetailsView: View {
         Text("Health labels:")
             .font(.headline)
             .fontWeight(.semibold)
+            .accessibilityIdentifier("details.health.title")
     }
     
     var healthLabels: some View {
@@ -118,6 +124,7 @@ struct RecipeDetailsView: View {
             .font(.footnote)
             .fontWeight(.semibold)
             .frame(maxWidth: .infinity, alignment: .leading)
+            .accessibilityIdentifier("details.health.labels")
     }
     
     var nutritionHolder: some View {
@@ -134,6 +141,7 @@ struct RecipeDetailsView: View {
             .font(.title2)
             .fontWeight(.semibold)
             .frame(maxWidth: .infinity, alignment: .leading)
+            .accessibilityIdentifier("details.nutrition.title")
     }
     
     var nutritionInfo: some View {
@@ -146,14 +154,17 @@ struct RecipeDetailsView: View {
                         .font(.caption)
                         .fontWeight(.semibold)
                         .foregroundStyle(data.color)
+                        .accessibilityIdentifier("details.info.percentile")
                     
                     Text(String(format: "%.1f g", data.value))
                         .font(.body)
                         .fontWeight(.semibold)
+                        .accessibilityIdentifier("details.info.value")
                     
                     Text(data.title)
                         .font(.footnote)
                         .fontWeight(.thin)
+                        .accessibilityIdentifier("details.info.title.\(data.title)")
                 }
             }
         }
@@ -181,15 +192,19 @@ struct RecipeDetailsView: View {
         .chartForegroundStyleScale(domain: viewModel.macroData.map { $0.title },
                                    range: viewModel.macroData.map { $0.color })
         .chartLegend(position: .leading, alignment: .center)
+        .accessibilityIdentifier("details.chart")
     }
     
+    @ViewBuilder
     var ingredients: some View {
-        VStack(spacing: 16) {
-            ingredientsTitle
-            
-            ingredientsList
+        if !viewModel.ingredients.isEmpty {
+            VStack(spacing: 16) {
+                ingredientsTitle
+                
+                ingredientsList
+            }
+            .padding(.horizontal, 24)
         }
-        .padding(.horizontal, 24)
     }
     
     var ingredientsTitle: some View {
@@ -197,6 +212,7 @@ struct RecipeDetailsView: View {
             .font(.title2)
             .fontWeight(.semibold)
             .frame(maxWidth: .infinity, alignment: .leading)
+            .accessibilityIdentifier("details.ingredients.title")
     }
     
     var ingredientsList: some View {
@@ -211,6 +227,7 @@ struct RecipeDetailsView: View {
                 }
             }
         }
+        .accessibilityIdentifier("details.ingredients.list")
     }
     
     var dismissHolder: some View {
@@ -232,6 +249,7 @@ struct RecipeDetailsView: View {
                 .tint(.white)
                 .frame(width: 24, height: 24)
         }
+        .accessibilityIdentifier("details.dismiss")
     }
 }
 
