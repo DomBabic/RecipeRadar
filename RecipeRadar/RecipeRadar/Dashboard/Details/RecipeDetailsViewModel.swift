@@ -26,6 +26,9 @@ final class RecipeDetailsViewModel: ObservableObject {
     /// ``MacroData`` array used to visualise macronutrient data through charts and info stacks.
     @Published var macroData: [MacroData]
     
+    @Published var healthLabels: [HealthLabel]
+    @Published var dietLabels: [DietLabel]
+    
     /// Default initialiser for ``RecipeDetailsViewModel``.
     ///
     /// - Parameters:
@@ -52,5 +55,8 @@ final class RecipeDetailsViewModel: ObservableObject {
             dataFor(nutrients.fat, .green),
             dataFor(nutrients.protein, .orange)
         ]
+        
+        self.healthLabels = recipe.healthLabels.filter { $0 != .unknown }
+        self.dietLabels = recipe.dietLabels.filter { $0 != .unknown }
     }
 }

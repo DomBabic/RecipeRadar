@@ -20,6 +20,8 @@
 		B497066D2B95C2C400ADB71C /* RecipeDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B497066C2B95C2C400ADB71C /* RecipeDetailsViewModel.swift */; };
 		B49706702B95C95200ADB71C /* PreviewProvider+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B497066F2B95C95200ADB71C /* PreviewProvider+Data.swift */; };
 		B49706732B95E2E300ADB71C /* MacroData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49706722B95E2E300ADB71C /* MacroData.swift */; };
+		B49706782B95EA8200ADB71C /* MacroDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49706772B95EA8200ADB71C /* MacroDataTests.swift */; };
+		B497067A2B95EB2D00ADB71C /* RecipeDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49706792B95EB2D00ADB71C /* RecipeDetailsViewModelTests.swift */; };
 		B4E695942B9351C500704020 /* RecipeRadarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695932B9351C500704020 /* RecipeRadarApp.swift */; };
 		B4E695982B9351C600704020 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E695972B9351C600704020 /* Assets.xcassets */; };
 		B4E695A52B9351C600704020 /* RecipeRadarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E695A42B9351C600704020 /* RecipeRadarTests.swift */; };
@@ -71,6 +73,8 @@
 		B497066C2B95C2C400ADB71C /* RecipeDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewModel.swift; sourceTree = "<group>"; };
 		B497066F2B95C95200ADB71C /* PreviewProvider+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewProvider+Data.swift"; sourceTree = "<group>"; };
 		B49706722B95E2E300ADB71C /* MacroData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroData.swift; sourceTree = "<group>"; };
+		B49706772B95EA8200ADB71C /* MacroDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroDataTests.swift; sourceTree = "<group>"; };
+		B49706792B95EB2D00ADB71C /* RecipeDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		B4E695902B9351C500704020 /* RecipeRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E695932B9351C500704020 /* RecipeRadarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRadarApp.swift; sourceTree = "<group>"; };
 		B4E695972B9351C600704020 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -165,6 +169,31 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		B49706742B95EA5F00ADB71C /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				B49706752B95EA7000ADB71C /* Details */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		B49706752B95EA7000ADB71C /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				B49706762B95EA7400ADB71C /* Models */,
+				B49706792B95EB2D00ADB71C /* RecipeDetailsViewModelTests.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		B49706762B95EA7400ADB71C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B49706772B95EA8200ADB71C /* MacroDataTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		B4E695872B9351C500704020 = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +228,7 @@
 		B4E695A32B9351C600704020 /* RecipeRadarTests */ = {
 			isa = PBXGroup;
 			children = (
+				B49706742B95EA5F00ADB71C /* Dashboard */,
 				B4E695A42B9351C600704020 /* RecipeRadarTests.swift */,
 			);
 			path = RecipeRadarTests;
@@ -360,6 +390,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B497067A2B95EB2D00ADB71C /* RecipeDetailsViewModelTests.swift in Sources */,
+				B49706782B95EA8200ADB71C /* MacroDataTests.swift in Sources */,
 				B4E695A52B9351C600704020 /* RecipeRadarTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
