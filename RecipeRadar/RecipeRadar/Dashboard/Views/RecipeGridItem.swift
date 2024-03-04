@@ -37,6 +37,7 @@ struct RecipeGridItem: View {
                 .frame(maxWidth: .infinity)
                 .background(Color.gray.opacity(0.05))
         }
+        .accessibilityIdentifier("recipe.gridItem.image")
     }
     
     var titleHolder: some View {
@@ -62,6 +63,7 @@ struct RecipeGridItem: View {
             .padding(.vertical, 6)
             .background(Color.white)
             .clipShape(Capsule())
+            .accessibilityIdentifier("recipe.gridItem.title")
     }
     
     @ViewBuilder
@@ -83,5 +85,6 @@ struct RecipeGridItem: View {
             .padding(.vertical, 6)
             .background(Color.orange.opacity(0.9))
             .clipShape(Capsule())
+            .accessibilityIdentifier("recipe.gridItem.prepTime")
     }
 }
