@@ -70,7 +70,7 @@ struct DashboardView: View {
     }
     
     var dataView: some View {
-        ScrollView {
+        ScrollView(.vertical, showsIndicators: false) {
             VStack(spacing: 4) {
                 spacing
                 
