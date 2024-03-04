@@ -55,7 +55,6 @@ final class DashboardViewModel: ObservableObject {
         $text
             .removeDuplicates()
             .sink { [weak self] _ in
-                self?.didChange = true
                 self?.resetPage()
             }
             .store(in: &cancellables)
@@ -88,6 +87,7 @@ final class DashboardViewModel: ObservableObject {
             
             let totalCount = recipeList.count
             hasMore = recipeList.more
+            didChange = false
             pageStart = pageEnd
             
             if pageEnd + 10 < totalCount {
@@ -102,7 +102,7 @@ final class DashboardViewModel: ObservableObject {
     
     /// Method used to reset pagination.
     func resetPage() {
-        didChange = false
+        didChange = true
         pageStart = 0
         pageEnd = 10
     }
