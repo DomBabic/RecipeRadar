@@ -37,7 +37,6 @@ struct SearchBar: View {
                 
                 onSearch()
             }
-            .id("searchTextField")
     }
     
     var searchButton: some View {
@@ -48,7 +47,6 @@ struct SearchBar: View {
         } label: {
             searchIcon
         }
-        .id("searchButton")
     }
     
     var searchIcon: some View {
