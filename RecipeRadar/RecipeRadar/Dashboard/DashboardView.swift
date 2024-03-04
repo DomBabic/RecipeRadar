@@ -96,14 +96,7 @@ struct DashboardView: View {
             VStack(spacing: 4) {
                 spacing
                 
-                LazyVGrid(columns: columns, spacing: 8) {
-                    ForEach(viewModel.data, id: \.self) { item in
-                        RecipeGridItem(recipe: item)
-                            .onTapGesture {
-                                viewModel.selectedRecipe = item
-                            }
-                    }
-                }
+                grid
                 
                 showMore
                 
@@ -114,6 +107,18 @@ struct DashboardView: View {
         .background(background)
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .accessibilityIdentifier("dashboard.dataView")
+    }
+    
+    var grid: some View {
+        LazyVGrid(columns: columns, spacing: 8) {
+            ForEach(viewModel.data, id: \.self) { item in
+                RecipeGridItem(recipe: item)
+                    .onTapGesture {
+                        viewModel.selectedRecipe = item
+                    }
+            }
+        }
+        .accessibilityIdentifier("dashboard.grid")
     }
     
     var spacing: some View {
