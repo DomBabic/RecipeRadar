@@ -170,14 +170,6 @@ struct RecipeDetailsView: View {
         }
     }
     
-    let chartColors: [Color] = [
-        .blue,
-        .green,
-        .orange,
-        .yellow,
-        .purple
-    ]
-    
     var macroChart: some View {
         Chart(viewModel.macroData, id: \.title) { data in
             SectorMark(
