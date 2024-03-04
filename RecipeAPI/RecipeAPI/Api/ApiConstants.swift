@@ -23,6 +23,11 @@ public struct ApiConstants {
         public static let query = "q"
     }
     
+    /// Enum containing API specific constants.
+    ///
+    /// Normally, any sensitive information would be stored in XCConfig file.
+    /// Config file would then be assigned to specific target, and any keys
+    /// would be referenced via property list of the bundle.
     public struct Api {
         /// Application ID used in network requests.
         public static let appId = "4dbab113"
